@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My gym website</title>
+    <link rel="stylesheet" href="Gym.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+    <style>
+        /* padding does not work without display:block/inline-block */
+        body{
+            font-family: 'Roboto Slab', serif;
+            margin: 0px;
+            padding: 0px;
+            background: url('pullingdown.jpg') no-repeat center center fixed;
+            background-size: cover;
+
+        }
+        .left{
+            display: inline-block; 
+            position: absolute;
+            left: 34px;
+            top: 20px;
+            color: white;
+        }
+        .left img{
+            width: 50px;
+            /* this filter function makes black image to white and viceversa */
+            filter: invert(100%);
+        }
+        .left div{
+            text-align: center;
+            line-height: 15px;
+            font-size: 16px;
+        }
+        .mid{
+            display: block;
+            margin: 35px auto;
+            width: 49%;
+            
+        }
+        .right{
+            position: absolute;
+            right: 34px;
+            top: 33px;
+            display: inline-block;
+
+        }
+        .navbar li{
+            display: inline-block;
+            font-size: 20px;    
+        }
+        .navbar li a{
+            text-decoration: none;
+            padding: 30px;
+            color: white;
+        }
+        .navbar li a:hover, .navbar li a.active{
+            text-decoration: underline;
+           color: crimson;
+        }
+        .btn{
+            font-family: 'Roboto Slab', serif;
+            margin: 0px 5px;
+            background-color: black;
+            color: rgb(250, 250, 250);
+            padding: 7px 7px;
+            border: 3px solid grey;
+            border-radius: 7px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: rgb(53, 51, 51);
+        }
+        .quote{
+            color: white;
+            display: inline-block;
+            
+        }
+        .heading{
+            position: absolute;
+            margin-left: 300px;
+            font-size: large;
+            margin-top: 50px;
+        }
+        .heading h2{
+            font-size: 30px;
+            font-family: 'Brush Script MT', cursive;;
+        }
+        .heading h1{
+            font-family:Tahoma, sans-serif;
+        }
+        .subpart{
+            position: absolute;
+            text-align: center;
+            margin-top: 300px;
+            margin-left: 150px;
+        }
+        .subpart h3{
+            color:red;
+            font-weight:bold;
+            text-decoration: underline;
+        }
+        .subpart p{
+            color: white;
+        }
+        
+        .container{
+            position: absolute;
+            right: 34px;
+            text-align: center;
+            border: 2px solid white;
+            margin: 0px 75px;
+            padding:70px;
+            width: 33%;
+            border-radius: 28px;
+
+        }
+        
+        .form-group input{
+            /* text-align: center; */
+            display: block;
+            width: 508px;
+            padding: 2px;
+            border: 2px solid black;
+            margin: 11px auto;
+            font-size: 25px;
+            border-radius: 8px;
+        }
+        .container h1{
+            /* text-align: center; */
+            color: yellow;
+        }  
+        .container button{
+            display: block;
+            width: 104%;
+            margin: 20px auto;
+        }  
+    </style>
+    
+<body>
+<header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+             <img src="logo.jpg" alt="Logo">
+             <div>Fitness</div>
+        </div>
+        <!-- mid box for navigation bar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- right box for buttons   -->
+        <div class="right">
+             <button class="btn">Chat With Us</button>
+             <button class="btn">Email Us</button>
+        </div>
+</header>
+
+<main>
+    <article class="quote">
+       <div class="heading">
+        <h2>Let's make</h2>
+        <h1>HEALTHY</h1>
+        <h3>happen</h3>
+       </div>
+       <div class="subpart">
+        <h3 >You Don't Have to Do it Alone</h3>
+        <p> If you're looking to join a supportive, welcoming gym</p>
+            <p> community with people of all fitness levels who want to see</p>  
+            <p>you succeed-you've come to the right place.</p>
+       </div> 
+
+       <div class="container" id="abc">
+           <h1>Join the best gym of Gurugram</h1>  
+           <form action="noaction.php">
+             <div class="form-group">
+                 <input type="text" name="" placeholder="Enter your Name">
+             </div>
+             <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Gender">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Email Id">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Phone Number">
+            </div>
+            <button class="btn">Submit</button>
+           </form>
+       </div>
+    </article>
+</main>    
+</body>
+</html>
